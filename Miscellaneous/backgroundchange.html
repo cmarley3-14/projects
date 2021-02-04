@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Background Change</title>
+		<script>
+			function random_bg_color() {
+				var decimal = Math.floor(Math.random() * 16777216);
+				var hexString = "#" + decimal.toString(16);
+				document.body.style.background = hexString;
+			}
+			window.onload = function() {random_bg_color()};
+		</script>
+		<style>
+			body {
+				vertical-align: middle;
+				text-align: center;
+			}
+			#action {
+				font-weight: bold;
+				position: fixed;
+				top: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="action" onclick="random_bg_color()">CHANGE BACKGROUND</button>
+	</body>
+</html>
